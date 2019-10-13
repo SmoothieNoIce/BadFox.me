@@ -66,7 +66,7 @@
 			<button type="submit" class="btn btn-primary" name="submit" value="submit">Submit</button>
 		</form> --}}
 		<tag-input
-		v-bind:mode="newPost" ></tag-input>			
+		v-bind:mode="'newPost'"></tag-input>			
 
 </div>
 <script type="text/javascript" src="{{ url('js/app.js') }}"></script>

@@ -53,7 +53,7 @@ Route::group(['prefix' => 'admin','middleware' => ['web','admin.login']], functi
         Route::get('/article/edit/{id}','Admin\ArticleController@editPost')->where('id', '[0-9]+')->name('editPost');
         //表單路由
         Route::post('/article/post','Admin\ArticleController@post');
-        Route::get('/article/preview','Admin\ArticleController@preview');
+        Route::post('/article/preview','Admin\ArticleController@preview');
         Route::post('/article/edit/{id}','Admin\ArticleController@edit')->where('id', '[0-9]+')->name('edit');
         Route::post('/article/delete/{id}','Admin\ArticleController@delete')->where('id', '[0-9]+')->name('delete');
         Route::post('/tag/add','Admin\TagController@add');

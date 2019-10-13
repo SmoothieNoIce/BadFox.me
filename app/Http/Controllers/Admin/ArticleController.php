@@ -63,8 +63,7 @@ class ArticleController extends Controller
         $article->author = $request['author'];
         $article->thumbnail = $request['thumbnail'];
         $article->content = $request['content'];
-        $tags = json_decode($request['tags']);
-        echo "<script>setTimeout(function(){ window.location.href = 'http://localhost/badfox/public/admin/article/preview'; }, 3000);</script>";
+        $tags = json_decode($request['tags'], true);
         return view("guest.article", [
             'article' => $article , 'tags'=> $tags, 'mode' => 1
         ]);

@@ -56,7 +56,6 @@
       <label class="fh5co-heading-2">標籤</label>
     </div>
     <p id="loading-p" style="visibility:hidden;">Loading...</p>
-    <p>{{tags}}</p>
     <vue-tags-input
       name="tag"
       class="my-vue-tags-input tag-form"
@@ -68,6 +67,20 @@
     />
     <button class="btn btn-secondary" name="preview" value="preview" v-on:click="preview">Preview</button>
     <button class="btn btn-primary" name="submit" value="submit" v-on:click="submit">Submit</button>
+    <form
+      style="display: hidden"
+      action="/badfox/public/admin/article/preview"
+      method="post"
+      id="form"
+    >
+      <input type="hidden" name="_token" :value="csrf" />
+      <input type="hidden" name="title" v-bind:value="name" />
+      <input type="hidden" name="date" v-bind:value="date" />
+      <input type="hidden" name="author" v-bind:value="author" />
+      <input type="hidden" name="thumbnail" v-bind:value="thumbnail" />
+      <input type="hidden" name="content" v-bind:value="content" />
+      <input id="preview-tags" type="hidden" name="tags" v-bind:value="tags" />
+    </form>
   </div>
 </template>
 
@@ -107,7 +120,6 @@ export default {
     tag: "initItems"
   },
   mounted: function() {
-    //this.tags=JSON.parse(this.tags);
     let jsonParse = JSON.parse(this.tags);
     let tagslist = new Array();
     for (let i = 0; i < jsonParse.length; i++) {
@@ -118,7 +130,7 @@ export default {
   },
   methods: {
     initAllTag() {
-      const url = `http://localhost/badfox/public/tag/all`;
+      const url = `/badfox/public/tag/all`;
       axios
         .get(url)
         .then(response => {
@@ -137,7 +149,7 @@ export default {
       //if (this.tag.length < 2) return;
       /*  const url = `https://itunes.apple.com/search?term=
         ${this.tag}&entity=allArtist&attribute=allArtistTerm&limit=6`; */
-      const url = `http://localhost/badfox/public/tag/search?term=${this.tag}`;
+      const url = `/badfox/public/tag/search?term=${this.tag}`;
       document.getElementById("loading-p").style.visibility = "visible";
 
       clearTimeout(this.debounce);
@@ -157,38 +169,27 @@ export default {
       }, 200);
     },
     preview() {
-      let data = new FormData();
-      data.append("title", this.title);
-      data.append("date", this.date);
-      data.append("author", this.author);
-      data.append("thumbnail", this.thumbnail);
-      data.append("content", this.content);
-      data.append("tags", this.tag);
-      axios
-        .get(`http://localhost/badfox/public/admin/article/preview`, data)
-        .then(function(response) {
-          if (response["status"] == "200") {
-            console.log(response);
-           // window.location = "http://localhost/badfox/public/admin/article/preview";
-          }
-        })
-        .catch(function(response) {
-          //handle error
-          console.log(response);
-        });
-    },
-    submit() {
-      //axio post\
-      //let json = JSON.stringify(this.tags);
-      //json = this.strinsert(json,json.length,"}")
-      //json = this.strinsert(json,0,"{")
       let jsontags = new Array();
       for (let i = 0; i < this.tags.length; i++) {
-        let obj = { text: this.tags[i]["text"] };
+        let obj = { name: this.tags[i]["text"] };
         jsontags[i] = obj;
       }
       let json = JSON.stringify(jsontags);
-      //alert(json);
+      $("#preview-tags").val(json);
+      $("#form").submit();
+    },
+    submit() {
+      //axio post
+
+      let jsontags = new Array();
+      if (this.tags != null) {
+        for (let i = 0; i < this.tags.length; i++) {
+          let obj = { text: this.tags[i]["text"] };
+          jsontags[i] = obj;
+        }
+      }
+
+      let json = JSON.stringify(jsontags);
 
       let data = new FormData();
       data.append("title", this.title);
@@ -210,7 +211,8 @@ export default {
             //redirect logic
             if (response["status"] == "200") {
               console.log(response);
-              window.location.href ="http://localhost/badfox/public/admin/articleList";
+              window.location.href =
+                "http://localhost/badfox/public/admin/articleList";
             }
           })
           .catch(function(response) {
@@ -219,7 +221,7 @@ export default {
           });
       } else if (this.mode == "edit") {
         console.log(this.id);
-        let urlpost1 = "http://localhost/badfox/public/admin/article/edit/";
+        let urlpost1 = "/badfox/public/admin/article/edit/";
         let urlpost2 = urlpost1.concat(this.id);
         axios({
           method: "post",
@@ -232,8 +234,7 @@ export default {
             //redirect logic
             if (response["status"] == "200") {
               console.log(response);
-              window.location.href =
-                "http://localhost/badfox/public/admin/articleList";
+              window.location.href = "/badfox/public/admin/articleList";
             }
           })
           .catch(function(response) {

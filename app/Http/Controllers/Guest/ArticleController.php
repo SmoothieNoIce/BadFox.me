@@ -33,7 +33,7 @@ class ArticleController extends Controller
     }
     public function getArticlesPyPage(){
         //$articles=DB::table('articles')->get();
-        $articles = Article::orderBy('date', 'desc')->paginate(10);
+        $articles = Article::orderBy('date', 'desc')->paginate(20);
         //dd($todos);
         return view("guest.articleList",[
             'articles' => $articles 
