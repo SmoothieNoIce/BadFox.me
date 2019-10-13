@@ -482,6 +482,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   position: relative;
   z-index: 1;
   margin-bottom: 25px;
+  min-width: 100%;
 }
 .blog-entry .blog-img img {
   position: relative;

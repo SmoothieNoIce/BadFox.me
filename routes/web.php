@@ -46,6 +46,7 @@ Route::group(['prefix' => 'admin','middleware' => ['web','admin.login']], functi
         Route::get('/home','Admin\IndexController@home');
         Route::get('/articleList','Admin\ArticleController@index');
         Route::get('/tagList','Admin\TagController@index');
+        Route::get('/imgList','Admin\ImgController@index');
         Route::get('/contentSetting','Admin\IndexController@contentSetting');
         Route::get('/fullSetting','Admin\IndexController@fullSetting');
         //文章操作路由
@@ -57,6 +58,7 @@ Route::group(['prefix' => 'admin','middleware' => ['web','admin.login']], functi
         Route::post('/article/edit/{id}','Admin\ArticleController@edit')->where('id', '[0-9]+')->name('edit');
         Route::post('/article/delete/{id}','Admin\ArticleController@delete')->where('id', '[0-9]+')->name('delete');
         Route::post('/tag/add','Admin\TagController@add');
+        Route::post('/image/upload','Admin\ImgController@upload');
 
         Route::post('/logout','Admin\LoginController@logout');
 });

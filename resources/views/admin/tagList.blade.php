@@ -12,6 +12,9 @@
     <li class="nav-item">
         <a class="nav-link active" href="{{url('/admin/tagList')}}">標籤</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url('/admin/imgList')}}">圖片列表</a>
+          </li>
     <li class="nav-item">
       <a class="nav-link" href="{{url('/admin/contentSetting')}}">內容設定</a>
     </li>
@@ -36,6 +39,7 @@
         <input class="form-control" type="text" placeholder="DESCRIPTION" name="description" value="">
     </div>
     <button type="submit" class="btn btn-primary" name="submit">新增Tag</button>
+   </form>
 </div>
 
 <div class="fh5co-narrow-content-2 animated fadeInLeft" data-animate-effect="fadeInLeft">

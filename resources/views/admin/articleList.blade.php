@@ -12,7 +12,10 @@
 	  </li>
 	  <li class="nav-item">
 		  <a class="nav-link" href="{{url('/admin/tagList')}}">標籤</a>
-		  </li>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="{{url('/admin/imgList')}}">圖片列表</a>
+	  </li>
 	  <li class="nav-item">
 		<a class="nav-link" href="{{url('/admin/contentSetting')}}">內容設定</a>
 	  </li>

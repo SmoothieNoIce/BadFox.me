@@ -9,7 +9,7 @@
 	@foreach ($articles as $article)
 	<div class="item col-md-5 col-sm-3 col-padding animated fadeInLeft" data-animate-effect="fadeInLeft">
 		<div class="blog-entry">
-			<a href="{{url('article/'.$article->id)}}" class="blog-img"><img src="{{$article->thumbnail}}" class="img-responsive" alt="IMAGE"></a>
+			<a href="{{url('article/'.$article->id)}}" class="blog-img"><img src="{{$article->thumbnail}}" class="blog-img img-responsive" alt="IMAGE"></a>
 			<div class="desc">
 				<h3><a href="{{url('article/'.$article->id)}}">{{$article->title}}</a></h3>
 				<span><small>{{$article->author}} </small> / <small>{{$article->date}}  </small> </small></span>
