@@ -4,7 +4,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-
+use App\Image;
 use Illuminate\Http\Request;
 
 class ImgController extends Controller
@@ -21,14 +21,20 @@ class ImgController extends Controller
         ]);
 
         if ($request->hasFile('input_img')) {
-            $image = $request->file('input_img');
-            $name = time() . '.' . $image->getClientOriginalExtension();
+            $file = $request->file('image');
+
+            $image = new Image();
+            $image->uploader_id = $request('uploader_id');
+            $image->date = $request('date');
+            $image->name = time() . '.' . $file->getClientOriginalExtension();
+
             $destinationPath = public_path('/images');
-            $image->move($destinationPath, $name);
+
+            $image->move($destinationPath, $image->name);
             //$this->save();
 
             return "ok";
-        }else{
+        } else {
             return "failed";
         }
     }
