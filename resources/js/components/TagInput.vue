@@ -202,7 +202,7 @@ export default {
       if (this.mode == "newPost") {
         axios({
           method: "post",
-          url: "http://localhost/badfox/public/admin/article/post",
+          url: "/badfox/public/admin/article/post",
           data: data,
           config: { headers: { "Content-Type": "multipart/form-data" } }
         })
@@ -212,7 +212,7 @@ export default {
             if (response["status"] == "200") {
               console.log(response);
               window.location.href =
-                "http://localhost/badfox/public/admin/articleList";
+                "/badfox/public/admin/articleList";
             }
           })
           .catch(function(response) {
