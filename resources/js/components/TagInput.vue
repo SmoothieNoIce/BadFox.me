@@ -69,7 +69,7 @@
     <button class="btn btn-primary" name="submit" value="submit" v-on:click="submit">Submit</button>
     <form
       style="display: hidden"
-      action="/badfox/public/admin/article/preview"
+      action="/admin/article/preview"
       method="post"
       id="form"
     >
@@ -130,7 +130,7 @@ export default {
   },
   methods: {
     initAllTag() {
-      const url = `/badfox/public/tag/all`;
+      const url = `/tag/all`;
       axios
         .get(url)
         .then(response => {
@@ -149,7 +149,7 @@ export default {
       //if (this.tag.length < 2) return;
       /*  const url = `https://itunes.apple.com/search?term=
         ${this.tag}&entity=allArtist&attribute=allArtistTerm&limit=6`; */
-      const url = `/badfox/public/tag/search?term=${this.tag}`;
+      const url = `/tag/search?term=${this.tag}`;
       document.getElementById("loading-p").style.visibility = "visible";
 
       clearTimeout(this.debounce);
@@ -202,7 +202,7 @@ export default {
       if (this.mode == "newPost") {
         axios({
           method: "post",
-          url: "/badfox/public/admin/article/post",
+          url: "/admin/article/post",
           data: data,
           config: { headers: { "Content-Type": "multipart/form-data" } }
         })
@@ -212,7 +212,7 @@ export default {
             if (response["status"] == "200") {
               console.log(response);
               window.location.href =
-                "/badfox/public/admin/articleList";
+                "/admin/articleList";
             }
           })
           .catch(function(response) {
@@ -221,7 +221,7 @@ export default {
           });
       } else if (this.mode == "edit") {
         console.log(this.id);
-        let urlpost1 = "/badfox/public/admin/article/edit/";
+        let urlpost1 = "/admin/article/edit/";
         let urlpost2 = urlpost1.concat(this.id);
         axios({
           method: "post",
@@ -234,7 +234,7 @@ export default {
             //redirect logic
             if (response["status"] == "200") {
               console.log(response);
-              window.location.href = "/badfox/public/admin/articleList";
+              window.location.href = "/admin/articleList";
             }
           })
           .catch(function(response) {
