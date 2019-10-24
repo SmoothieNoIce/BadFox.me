@@ -69,7 +69,7 @@
     <button class="btn btn-primary" name="submit" value="submit" v-on:click="submit">Submit</button>
     <form
       style="display: hidden"
-      action="/admin/article/preview"
+      action="http://badfox-me-website.herokuapp.com/admin/article/preview"
       method="post"
       id="form"
     >
