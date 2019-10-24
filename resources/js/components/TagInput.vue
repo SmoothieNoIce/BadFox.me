@@ -118,7 +118,8 @@ export default {
   ],
   watch: {
     tag: "initItems"
-  },
+  }, 
+  
   mounted: function() {
     let jsonParse = JSON.parse(this.tags);
     let tagslist = new Array();
@@ -130,7 +131,7 @@ export default {
   },
   methods: {
     initAllTag() {
-      const url = `/tag/all`;
+      const url = `http://badfox-me-website.herokuapp.com/tag/all`;
       axios
         .get(url)
         .then(response => {
@@ -149,7 +150,7 @@ export default {
       //if (this.tag.length < 2) return;
       /*  const url = `https://itunes.apple.com/search?term=
         ${this.tag}&entity=allArtist&attribute=allArtistTerm&limit=6`; */
-      const url = `/tag/search?term=${this.tag}`;
+      const url = `http://badfox-me-website.herokuapp.com/tag/search?term=${this.tag}`;
       document.getElementById("loading-p").style.visibility = "visible";
 
       clearTimeout(this.debounce);
@@ -202,7 +203,7 @@ export default {
       if (this.mode == "newPost") {
         axios({
           method: "post",
-          url: "/admin/article/post",
+          url: "http://badfox-me-website.herokuapp.com/admin/article/post",
           data: data,
           config: { headers: { "Content-Type": "multipart/form-data" } }
         })
@@ -212,7 +213,7 @@ export default {
             if (response["status"] == "200") {
               console.log(response);
               window.location.href =
-                "/admin/articleList";
+                "http://badfox-me-website.herokuapp.com/admin/articleList";
             }
           })
           .catch(function(response) {
@@ -221,7 +222,7 @@ export default {
           });
       } else if (this.mode == "edit") {
         console.log(this.id);
-        let urlpost1 = "/admin/article/edit/";
+        let urlpost1 = "http://badfox-me-website.herokuapp.com/admin/article/edit/";
         let urlpost2 = urlpost1.concat(this.id);
         axios({
           method: "post",
@@ -234,7 +235,7 @@ export default {
             //redirect logic
             if (response["status"] == "200") {
               console.log(response);
-              window.location.href = "/admin/articleList";
+              window.location.href = "http://badfox-me-website.herokuapp.com/admin/articleList";
             }
           })
           .catch(function(response) {
