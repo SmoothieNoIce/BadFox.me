@@ -92,6 +92,16 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
+axios.defaults.baseURL = 'http://badfox-me-website.herokuapp.com';
+
+mix.webpackConfig({
+    resolve: {
+        modules: [
+            path.resolve(__dirname, 'vendor/laravel/spark/resources/assets/js')
+        ]
+    }
+});
+
 export default {
   components: {
     VueTagsInput
