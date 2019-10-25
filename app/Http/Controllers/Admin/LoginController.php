@@ -40,7 +40,7 @@ class LoginController extends Controller
                 echo('驗證失敗');
             }
         }else{
-            echo('無此帳號');
+            echo('驗證失敗');
         }
         //return redirect('admin/home');
     }

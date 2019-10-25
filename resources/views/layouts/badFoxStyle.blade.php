@@ -88,28 +88,24 @@
 							<li><a href="{{ url('articleList') }}">文章</a></li>
 							<li><a href="{{ url('search') }}">搜尋</a></li>
 							<li><a href="{{ url('about') }}">關於本站</a></li>
-							<li><a href="{{ url('admin/login') }}">後台</a></li>
 							@break
 						@case(1)
 							<li ><a href="{{ url('index') }}">首頁</a></li>
 							<li class="fh5co-active"><a href="{{ url('articleList') }}">文章</a></li>
 							<li><a href="{{ url('search') }}">搜尋</a></li>
 							<li><a href="{{ url('about') }}">關於本站</a></li>
-							<li><a href="{{ url('admin/login') }}">後台</a></li>
 							@break
 						@case(2)
 							<li><a href="{{ url('index') }}">首頁</a></li>
 							<li><a href="{{ url('articleList') }}">文章</a></li>
 							<li class="fh5co-active"><a href="{{ url('search') }}">搜尋</a></li>
 							<li><a href="{{ url('about') }}">關於本站</a></li>
-							<li><a href="{{ url('admin/login') }}">後台</a></li>
 							@break
 						@case(3)
 							<li><a href="{{ url('index') }}">首頁</a></li>
 							<li><a href="{{ url('articleList') }}">文章</a></li>
 							<li><a href="{{ url('search') }}">搜尋</a></li>
 							<li class="fh5co-active"><a href="{{ url('about') }}">關於本站</a></li>
-							<li><a href="{{ url('admin/login') }}">後台</a></li>
 							@break
 						@case(4)
 							<li><a href="{{ url('index') }}">首頁</a></li>
@@ -123,7 +119,6 @@
 							<li><a href="{{ url('articleList') }}">文章</a></li>
 							<li><a href="{{ url('search') }}">搜尋</a></li>
 							<li><a href="{{ url('about') }}">關於本站</a></li>
-							<li><a href="{{ url('admin/login') }}">後台</a></li>
 					@endswitch
 				</ul>
 			</nav>
