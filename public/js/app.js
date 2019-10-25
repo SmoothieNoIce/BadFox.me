@@ -1883,7 +1883,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _johmun_vue_tags_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @johmun/vue-tags-input */ "./node_modules/@johmun/vue-tags-input/dist/vue-tags-input.js");
+/* WEBPACK VAR INJECTION */(function(__dirname) {/* harmony import */ var _johmun_vue_tags_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @johmun/vue-tags-input */ "./node_modules/@johmun/vue-tags-input/dist/vue-tags-input.js");
 /* harmony import */ var _johmun_vue_tags_input__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_johmun_vue_tags_input__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
@@ -1981,6 +1981,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]);
+axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://badfox-me-website.herokuapp.com';
+mix.webpackConfig({
+  resolve: {
+    modules: [path.resolve(__dirname, 'vendor/laravel/spark/resources/assets/js')]
+  }
+});
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     VueTagsInput: _johmun_vue_tags_input__WEBPACK_IMPORTED_MODULE_0___default.a
@@ -2013,7 +2019,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
   },
   methods: {
     initAllTag: function initAllTag() {
-      var url = "/badfox/public/tag/all";
+      var url = "http://badfox-me-website.herokuapp.com/tag/all";
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(url).then(function (response) {//document.getElementById('loading-p').style.visibility= "hidden";
       })["catch"](function (error) {
         // 请求失败处理
@@ -2031,7 +2037,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 
       /*  const url = `https://itunes.apple.com/search?term=
         ${this.tag}&entity=allArtist&attribute=allArtistTerm&limit=6`; */
-      var url = "/badfox/public/tag/search?term=".concat(this.tag);
+      var url = "http://badfox-me-website.herokuapp.com/tag/search?term=".concat(this.tag);
       document.getElementById("loading-p").style.visibility = "visible";
       clearTimeout(this.debounce);
       this.debounce = setTimeout(function () {
@@ -2087,7 +2093,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
       if (this.mode == "newPost") {
         axios__WEBPACK_IMPORTED_MODULE_1___default()({
           method: "post",
-          url: "http://localhost/badfox/public/admin/article/post",
+          url: "http://badfox-me-website.herokuapp.com/admin/article/post",
           data: data,
           config: {
             headers: {
@@ -2099,7 +2105,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
           //redirect logic
           if (response["status"] == "200") {
             console.log(response);
-            window.location.href = "http://localhost/badfox/public/admin/articleList";
+            window.location.href = "http://badfox-me-website.herokuapp.com/admin/articleList";
           }
         })["catch"](function (response) {
           //handle error
@@ -2107,7 +2113,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
         });
       } else if (this.mode == "edit") {
         console.log(this.id);
-        var urlpost1 = "/badfox/public/admin/article/edit/";
+        var urlpost1 = "http://badfox-me-website.herokuapp.com/admin/article/edit/";
         var urlpost2 = urlpost1.concat(this.id);
         axios__WEBPACK_IMPORTED_MODULE_1___default()({
           method: "post",
@@ -2123,7 +2129,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
           //redirect logic
           if (response["status"] == "200") {
             console.log(response);
-            window.location.href = "/badfox/public/admin/articleList";
+            window.location.href = "http://badfox-me-website.herokuapp.com/admin/articleList";
           }
         })["catch"](function (response) {
           //handle error
@@ -2145,6 +2151,7 @@ vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
     }
   }
 });
+/* WEBPACK VAR INJECTION */}.call(this, "/"))
 
 /***/ }),
 
@@ -6624,7 +6631,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* style the background and the text color of the input ... */\n.vue-tags-input {\r\n  max-width: 100% !important;\r\n  width: 80% !important;\r\n  margin: 0px 0 10px 0 !important;\r\n  background: #121212 !important;\n}\n.vue-tags-input .ti-new-tag-input {\r\n  background: transparent;\r\n  color: #b7c4c9;\n}\n.vue-tags-input .ti-input {\r\n  height: 50px !important;\r\n  border: 2px solid #77ecff !important;\r\n  padding: 4px 10px;\r\n  transition: border-bottom 200ms ease;\n}\r\n\r\n/* we cange the border color if the user focuses the input */\n.vue-tags-input.ti-focus .ti-input {\r\n  border: 1px solid #77ecff !important;\n}\r\n\r\n/* some stylings for the autocomplete layer */\n.vue-tags-input .ti-autocomplete {\r\n  background: #283944;\r\n  border: 1px solid #8b9396;\r\n  border-top: none;\n}\r\n\r\n/* the selected item in the autocomplete layer, should be highlighted */\n.vue-tags-input .ti-item.ti-selected-item {\r\n  background: #77ecff;\r\n  color: #283944;\n}\r\n\r\n/* style the placeholders color across all browser */\n.vue-tags-input ::-webkit-input-placeholder {\r\n  color: #a4b1b6;\n}\n.vue-tags-input ::-moz-placeholder {\r\n  color: #a4b1b6;\n}\n.vue-tags-input :-ms-input-placeholder {\r\n  color: #a4b1b6;\n}\n.vue-tags-input :-moz-placeholder {\r\n  color: #a4b1b6;\n}\r\n\r\n/* default styles for all the tags */\n.vue-tags-input .ti-tag {\r\n  position: relative;\r\n  background: #77ecff;\r\n  color: #283944;\r\n  font-size: 18px !important;\n}\r\n\r\n/* we defined a custom css class in the data model, now we are using it to style the tag */\n.vue-tags-input .ti-tag.custom-class {\r\n  background: transparent;\r\n  border: 1px solid #afde6e;\r\n  color: #afde6e;\r\n  margin-right: 4px;\r\n  border-radius: 0px;\r\n  font-size: 13px;\n}\r\n\r\n/* the styles if a tag is invalid */\n.vue-tags-input .ti-tag.ti-invalid {\r\n  background-color: #e88a74;\n}\r\n\r\n/* if the user input is invalid, the input color should be red */\n.vue-tags-input .ti-new-tag-input.ti-invalid {\r\n  color: #e88a74;\n}\r\n\r\n/* if a tag or the user input is a duplicate, it should be crossed out */\n.vue-tags-input .ti-duplicate span,\r\n.vue-tags-input .ti-new-tag-input.ti-duplicate {\r\n  text-decoration: line-through;\n}\r\n\r\n/* if the user presses backspace, the complete tag should be crossed out, to mark it for deletion */\n.vue-tags-input .ti-tag:after {\r\n  transition: transform 0.2s;\r\n  position: absolute;\r\n  content: \"\";\r\n  height: 2px;\r\n  width: 108%;\r\n  left: -4%;\r\n  top: calc(50% - 1px);\r\n  background-color: #000;\r\n  transform: scaleX(0);\n}\n.vue-tags-input .ti-deletion-mark:after {\r\n  transform: scaleX(1);\n}\n.vue-tags-input .ti-valid {\r\n  font-size: 18px !important;\r\n  margin: 0 0 0 -5px !important;\n}\n.ti-item {\r\n  padding: 5px !important;\n}\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* style the background and the text color of the input ... */\n.vue-tags-input {\r\n  max-width: 100% !important;\r\n  width: 80% !important;\r\n  margin: 0px 0 10px 0 !important;\r\n  background: #121212 !important;\n}\n.vue-tags-input .ti-new-tag-input {\r\n  background: transparent;\r\n  color: #b7c4c9;\n}\n.vue-tags-input .ti-input {\r\n  height: 50px !important;\r\n  border: 2px solid #77ecff !important;\r\n  padding: 4px 10px;\r\n  transition: border-bottom 200ms ease;\n}\r\n\r\n/* we cange the border color if the user focuses the input */\n.vue-tags-input.ti-focus .ti-input {\r\n  border: 1px solid #77ecff !important;\n}\r\n\r\n/* some stylings for the autocomplete layer */\n.vue-tags-input .ti-autocomplete {\r\n  background: #283944;\r\n  border: 1px solid #8b9396;\r\n  border-top: none;\n}\r\n\r\n/* the selected item in the autocomplete layer, should be highlighted */\n.vue-tags-input .ti-item.ti-selected-item {\r\n  background: #77ecff;\r\n  color: #283944;\n}\r\n\r\n/* style the placeholders color across all browser */\n.vue-tags-input ::-webkit-input-placeholder {\r\n  color: #a4b1b6;\n}\n.vue-tags-input ::-moz-placeholder {\r\n  color: #a4b1b6;\n}\n.vue-tags-input :-ms-input-placeholder {\r\n  color: #a4b1b6;\n}\n.vue-tags-input :-moz-placeholder {\r\n  color: #a4b1b6;\n}\r\n\r\n/* default styles for all the tags */\n.vue-tags-input .ti-tag {\r\n  position: relative;\r\n  background: #77ecff;\r\n  color: #283944;\r\n  font-size: 18px !important;\n}\r\n\r\n/* we defined a custom css class in the data model, now we are using it to style the tag */\n.vue-tags-input .ti-tag.custom-class {\r\n  background: transparent;\r\n  border: 1px solid #afde6e;\r\n  color: #afde6e;\r\n  margin-right: 4px;\r\n  border-radius: 0px;\r\n  font-size: 13px;\n}\r\n\r\n/* the styles if a tag is invalid */\n.vue-tags-input .ti-tag.ti-invalid {\r\n  background-color: #e88a74;\n}\r\n\r\n/* if the user input is invalid, the input color should be red */\n.vue-tags-input .ti-new-tag-input.ti-invalid {\r\n  color: #e88a74;\n}\r\n\r\n/* if a tag or the user input is a duplicate, it should be crossed out */\n.vue-tags-input .ti-duplicate span,\r\n.vue-tags-input .ti-new-tag-input.ti-duplicate {\r\n  text-decoration: line-through;\n}\r\n\r\n/* if the user presses backspace, the complete tag should be crossed out, to mark it for deletion */\n.vue-tags-input .ti-tag:after {\r\n  transition: transform 0.2s;\r\n  position: absolute;\r\n  content: \"\";\r\n  height: 2px;\r\n  width: 108%;\r\n  left: -4%;\r\n  top: calc(50% - 1px);\r\n  background-color: #000;\r\n  transform: scaleX(0);\n}\n.vue-tags-input .ti-deletion-mark:after {\r\n  transform: scaleX(1);\n}\n.vue-tags-input .ti-valid {\r\n  font-size: 18px !important;\r\n  margin: 0 0 0 -5px !important;\n}\n.ti-item {\r\n  padding: 5px !important;\n}\r\n", ""]);
 
 // exports
 
@@ -38373,7 +38380,8 @@ var render = function() {
         {
           staticStyle: { display: "hidden" },
           attrs: {
-            action: "/badfox/public/admin/article/preview",
+            action:
+              "http://badfox-me-website.herokuapp.com/admin/article/preview",
             method: "post",
             id: "form"
           }
