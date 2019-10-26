@@ -69,7 +69,7 @@
     <button class="btn btn-primary" name="submit" value="submit" v-on:click="submit">Submit</button>
     <form
       style="display: hidden"
-      action="http://badfox-me-website.herokuapp.com/admin/article/preview"
+      action="https://badfox-me-website.herokuapp.com/admin/article/preview"
       method="post"
       id="form"
     >
@@ -92,7 +92,7 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-axios.defaults.baseURL = 'http://badfox-me-website.herokuapp.com';
+axios.defaults.baseURL = 'https://badfox-me-website.herokuapp.com';
 
 export default {
   components: {
@@ -133,7 +133,7 @@ export default {
   },
   methods: {
     initAllTag() {
-      const url = `http://badfox-me-website.herokuapp.com/tag/all`;
+      const url = `/tag/all`;
       axios
         .get(url)
         .then(response => {
@@ -152,7 +152,7 @@ export default {
       //if (this.tag.length < 2) return;
       /*  const url = `https://itunes.apple.com/search?term=
         ${this.tag}&entity=allArtist&attribute=allArtistTerm&limit=6`; */
-      const url = `http://badfox-me-website.herokuapp.com/tag/search?term=${this.tag}`;
+      const url = `/tag/search?term=${this.tag}`;
       document.getElementById("loading-p").style.visibility = "visible";
 
       clearTimeout(this.debounce);
@@ -205,7 +205,7 @@ export default {
       if (this.mode == "newPost") {
         axios({
           method: "post",
-          url: "http://badfox-me-website.herokuapp.com/admin/article/post",
+          url: "/admin/article/post",
           data: data,
           config: { headers: { "Content-Type": "multipart/form-data" } }
         })
@@ -215,7 +215,7 @@ export default {
             if (response["status"] == "200") {
               console.log(response);
               window.location.href =
-                "http://badfox-me-website.herokuapp.com/admin/articleList";
+                "/admin/articleList";
             }
           })
           .catch(function(response) {
@@ -224,7 +224,7 @@ export default {
           });
       } else if (this.mode == "edit") {
         console.log(this.id);
-        let urlpost1 = "http://badfox-me-website.herokuapp.com/admin/article/edit/";
+        let urlpost1 = "/admin/article/edit/";
         let urlpost2 = urlpost1.concat(this.id);
         axios({
           method: "post",
@@ -237,7 +237,7 @@ export default {
             //redirect logic
             if (response["status"] == "200") {
               console.log(response);
-              window.location.href = "http://badfox-me-website.herokuapp.com/admin/articleList";
+              window.location.href = "/admin/articleList";
             }
           })
           .catch(function(response) {
