@@ -8,6 +8,10 @@
 				<br><br>
 				<div><img src="{{URL::asset('images/badfox.png')}}" class="logo-img img-responsive" alt="IMAGE"></div>
 				<h3>簡歷</h3>
+				<div class="about-title-div"><p class="about-title">Links</p></div>
+				<a href="https://github.com/SmoothieNoIce">Github</a>
+				<a href="https://bitbucket.org/dashboard/repositories">Bitbucket</a>
+				<br>
 				<div class="about-title-div"><p class="about-title">Technique</p></div>
 				<p>＊Web Design</p>
 				<p>＊Android APP Design</p>
@@ -41,10 +45,6 @@
 				<p>＊TwPlan(游台灣)</p>
 				<p>＊BadFox website</p>
 				<p>＊Furret bot</p>
-				<br>
-				<div class="about-title-div"><p class="about-title">Others</p></div>
-				<a herf="https://github.com/SmoothieNoIce">Github</a>
-				<a herf="https://bitbucket.org/dashboard/repositories">Bitbucket</a>
 				<br>
 		</div>
 	</div>
