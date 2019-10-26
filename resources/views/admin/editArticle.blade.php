@@ -40,6 +40,8 @@
 	
 	<h2 class="fh5co-heading">編輯文章</h2>
 
+
+
 	<tag-input
 	@isset($article->id)
 		v-bind:id="'{{$article->id}}'"
@@ -57,7 +59,7 @@
 		v-bind:thumbnail="'{{$article->thumbnail}}'"
 	@endisset
 	@isset($article->content)
-		v-bind:content='{{$article->content}}'
+		v-bind:content="`'{{$article->content}}'`"
 	@endisset
  	@isset($tags)
 	 	v-bind:tags="'{{$tags}}'" 
