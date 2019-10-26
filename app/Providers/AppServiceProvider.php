@@ -24,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        //for https
+        URL::forceScheme('https');
         //for mariaDB
         Schema::defaultStringLength(191); 
     }
