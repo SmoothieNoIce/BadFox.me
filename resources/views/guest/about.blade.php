@@ -12,6 +12,13 @@
 				<a href="https://github.com/SmoothieNoIce">Github</a>
 				<a href="https://bitbucket.org/dashboard/repositories">Bitbucket</a>
 				<br>
+				<div class="about-title-div"><p class="about-title">Portfolio</p></div>
+				<p href="https://badfox-me-website.herokuapp.com/index">＊BadFox website</p>
+				<p href="https://play.google.com/store/apps/details?id=com.abbc45255.emojibyabbc45255&hl=zh-TW">＊Kaomoji Go</p>
+				<p href="https://play.google.com/store/apps/details?id=me.badfox.twplan&hl=zh-TW">＊TwPlan(游台灣)</p>
+				<p href="https://play.google.com/store/apps/details?id=com.abbc45255.simplewidgetgo&hl=zh-TW">＊SWG</p>
+				<p href="https://discordapp.com/api/oauth2/authorize?client_id=630007539840581642&permissions=0&scope=bot">＊Badfox bot</p>
+				<br>
 				<div class="about-title-div"><p class="about-title">Technique</p></div>
 				<p>＊Web Design</p>
 				<p>＊Android APP Design</p>
@@ -39,12 +46,6 @@
 				<p>＊Sqlite/p>
 				<p>＊Radis</p>
 				<p>＊MongoDB</p>
-				<br>
-				<div class="about-title-div"><p class="about-title">Portfolio</p></div>
-				<p>＊Kaomoji Go</p>
-				<p>＊TwPlan(游台灣)</p>
-				<p>＊BadFox website</p>
-				<p>＊Furret bot</p>
 				<br>
 		</div>
 	</div>
