@@ -37,7 +37,7 @@
 				<div class="about-title-div"><p class="about-title">Database</p></div>
 				<p>＊MySQL</p>
 				<p>＊PGSQL</p>
-				<p>＊Sqlite/p>
+				<p>＊Sqlite</p>
 				<p>＊Radis</p>
 				<p>＊MongoDB</p>
 		</div>
