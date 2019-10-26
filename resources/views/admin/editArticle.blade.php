@@ -40,15 +40,6 @@
 	
 	<h2 class="fh5co-heading">編輯文章</h2>
 
-	 <div class="form-group">
-		@isset($tags)
-		@foreach ($tags as $tag)
-			<a href="" style="margin:0 10px 0 0;" class="badge badge-primary">ID：{{$tag->id}}<br>NAME：{{$tag->name}}<br>DESCRIPTION：{{$tag->description}}</a>
-			<br>
-		@endforeach
-		@endisset
-	</div> 
-
 	<tag-input
 	@isset($article->id)
 		v-bind:id="'{{$article->id}}'"
