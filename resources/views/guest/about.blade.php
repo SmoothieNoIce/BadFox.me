@@ -11,39 +11,40 @@
 				<div class="about-title-div"><p class="about-title">Technique</p></div>
 				<p>＊Web Design</p>
 				<p>＊Android APP Design</p>
-				<p>＊資料庫設計</p>
 				<br>
 				<div class="about-title-div"><p class="about-title">Programming Language</p></div>
-				<p>＊JAVA</p>
-				<p>＊JAVASCRIPT</p>
-				<p>＊PHP</p>
-				<p>＊PYTHON</p>
-				<p>＊GO</p>
-				<p>＊HTML / CSS</p>
+				<p>＊Java</p>
+				<p>＊Javascript</p>
+				<p>＊Php</p>
+				<p>＊Python</p>
+				<p>＊Golang/p>
+				<p>＊Html/css</p>
 				<br>
 				<div class="about-title-div"><p class="about-title">FrameWork</p></div>
-				<p>＊LARAVEL</p>
-				<p>＊VUE.JS</p>
-				<p>＊ANDROID FRAMEWORK</p>
+				<p>＊Laravel</p>
+				<p>＊Vue.js</p>
 				<br>
 				<div class="about-title-div"><p class="about-title">Tools</p></div>
-				<p>＊JQUERY / AJAX</p>
-				<p>＊BOOTSTRAP</p>
-				<p>＊FIREBASE</p>
-				<p>＊DOCKER</p>
-				<p>＊GSON</p>
+				<p>＊Bootstrap</p>
+				<p>＊Firebase</p>
+				<p>＊Docker</p>
 				<br>
 				<div class="about-title-div"><p class="about-title">Database</p></div>
-				<p>＊MYSQL</p>
-				<p>＊SQLITE</p>
-				<p>＊RADIS</p>
-				<p>＊MONGODB</p>
+				<p>＊MySQL</p>
+				<p>＊PGSQL</p>
+				<p>＊Sqlite/p>
+				<p>＊Radis</p>
+				<p>＊MongoDB</p>
 				<br>
-				<div class="about-title-div"><p class="about-title">PORTFOLIO</p></div>
+				<div class="about-title-div"><p class="about-title">Portfolio</p></div>
 				<p>＊Kaomoji Go</p>
 				<p>＊TwPlan(游台灣)</p>
 				<p>＊BadFox website</p>
 				<p>＊Furret bot</p>
+				<br>
+				<div class="about-title-div"><p class="about-title">Others</p></div>
+				<a herf="https://github.com/SmoothieNoIce">Github</a>
+				<a herf="https://bitbucket.org/dashboard/repositories">Bitbucket</a>
 				<br>
 		</div>
 	</div>
