@@ -1981,7 +1981,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]);
-axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://badfox-me-website.herokuapp.com';
+axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'https://badfox-me-website.herokuapp.com';
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     VueTagsInput: _johmun_vue_tags_input__WEBPACK_IMPORTED_MODULE_0___default.a
@@ -2014,7 +2014,7 @@ axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://badfox-m
   },
   methods: {
     initAllTag: function initAllTag() {
-      var url = "http://badfox-me-website.herokuapp.com/tag/all";
+      var url = "/tag/all";
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(url).then(function (response) {//document.getElementById('loading-p').style.visibility= "hidden";
       })["catch"](function (error) {
         // 请求失败处理
@@ -2032,7 +2032,7 @@ axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://badfox-m
 
       /*  const url = `https://itunes.apple.com/search?term=
         ${this.tag}&entity=allArtist&attribute=allArtistTerm&limit=6`; */
-      var url = "http://badfox-me-website.herokuapp.com/tag/search?term=".concat(this.tag);
+      var url = "/tag/search?term=".concat(this.tag);
       document.getElementById("loading-p").style.visibility = "visible";
       clearTimeout(this.debounce);
       this.debounce = setTimeout(function () {
@@ -2088,7 +2088,7 @@ axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://badfox-m
       if (this.mode == "newPost") {
         axios__WEBPACK_IMPORTED_MODULE_1___default()({
           method: "post",
-          url: "http://badfox-me-website.herokuapp.com/admin/article/post",
+          url: "/admin/article/post",
           data: data,
           config: {
             headers: {
@@ -2100,7 +2100,7 @@ axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://badfox-m
           //redirect logic
           if (response["status"] == "200") {
             console.log(response);
-            window.location.href = "http://badfox-me-website.herokuapp.com/admin/articleList";
+            window.location.href = "/admin/articleList";
           }
         })["catch"](function (response) {
           //handle error
@@ -2108,7 +2108,7 @@ axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://badfox-m
         });
       } else if (this.mode == "edit") {
         console.log(this.id);
-        var urlpost1 = "http://badfox-me-website.herokuapp.com/admin/article/edit/";
+        var urlpost1 = "/admin/article/edit/";
         var urlpost2 = urlpost1.concat(this.id);
         axios__WEBPACK_IMPORTED_MODULE_1___default()({
           method: "post",
@@ -2124,7 +2124,7 @@ axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.baseURL = 'http://badfox-m
           //redirect logic
           if (response["status"] == "200") {
             console.log(response);
-            window.location.href = "http://badfox-me-website.herokuapp.com/admin/articleList";
+            window.location.href = "/admin/articleList";
           }
         })["catch"](function (response) {
           //handle error
@@ -38375,7 +38375,7 @@ var render = function() {
           staticStyle: { display: "hidden" },
           attrs: {
             action:
-              "http://badfox-me-website.herokuapp.com/admin/article/preview",
+              "https://badfox-me-website.herokuapp.com/admin/article/preview",
             method: "post",
             id: "form"
           }
