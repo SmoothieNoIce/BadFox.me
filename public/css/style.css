@@ -397,7 +397,12 @@ figure figcaption {
   }
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner s
-.fh5co-lead {
+.fh5co-lead p{
+  font-size: 20px;
+  color: #fff;
+}
+#fh5co-hero .flexslider .slider-text > .slider-text-inner s
+.fh5co-lead a{
   font-size: 20px;
   color: #fff;
 }
@@ -614,7 +619,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 
 .fh5co-heading-colored {
-  color: #77ECFF;
+  color: #e6e6e6;
   font-size: 30px;
 }
 
@@ -1233,6 +1238,14 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   width: 93%;
   margin: 0 auto;
   padding: 0 0 0 0;
+  clear: both;
+}
+
+#fh5co-main .fh5co-narrow-content-4 {
+  position: relative;
+  width: 93%;
+  margin: 0 auto;
+  padding: 2em 0;
   clear: both;
 }
 
