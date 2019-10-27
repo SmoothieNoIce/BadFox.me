@@ -1,4 +1,4 @@
-@extends('layouts.badFoxStyle', ['category' => '0'])
+@extends('layouts.badFoxStyle', ['category' => '0','title' => '首頁 - BadFox'])
 
 @section('content')
 

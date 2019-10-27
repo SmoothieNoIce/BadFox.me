@@ -1,4 +1,4 @@
-@extends('layouts.badFoxStyle', ['category' => '4'])
+@extends('layouts.badFoxStyle', ['category' => '4','title' => '後台-圖片列表 - BadFox'])
 
 @section('content')
 <div class="fh5co-narrow-content-2">
