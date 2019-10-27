@@ -59,7 +59,7 @@
 		v-bind:thumbnail="'{{$article->thumbnail}}'"
 	@endisset
 	@isset($article->content)
-		v-bind:content="{content:'{{$article}}'}"
+		v-bind:content="'{{$article}}''"
 	@endisset
  	@isset($tags)
 	 	v-bind:tags="'{{$tags}}'" 
