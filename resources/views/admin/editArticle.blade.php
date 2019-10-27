@@ -59,7 +59,7 @@
 		v-bind:thumbnail="'{{$article->thumbnail}}'"
 	@endisset
 	@isset($article->content)
-		v-bind:content="'{{json_encode($article)}}'"
+		v-bind:content="'{{$article->content)}}'"
 	@endisset
  	@isset($tags)
 	 	v-bind:tags="'{{$tags}}'" 
