@@ -136,7 +136,7 @@ export default {
       const url = `/tag/all`;
       axios
         .get(url)
-        .then(response => {
+        .then(response => { 
           //document.getElementById('loading-p').style.visibility= "hidden";
         })
         .catch(function(error) {

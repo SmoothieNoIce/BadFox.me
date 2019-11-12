@@ -7,7 +7,7 @@
     <h2 class="fh5co-heading">首頁</h2>
 	<div class="fh5co-text">
             <p>放一些怪怪的東西的地方</p>
-    </div>
+    </div> 
     <div class="fh5co-text">
             <h4>最新文章</h3>
             <div class="row row-bottom-padded-md box">
