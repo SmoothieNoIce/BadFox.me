@@ -7,7 +7,8 @@ use Closure;
 class ForceHttpsMiddleware{
     public function handle($request, Closure $next){
 
-        if (!$request->secure() && App::environment() === 'production') {//optionally disable for localhost development
+        if (!$request->secure()) {//optionally disable for localhost development
+            $request->setTrustedProxies( [ $request->getClientIp() ] ); 
             return redirect()->secure($request->getRequestUri());
         }
 
