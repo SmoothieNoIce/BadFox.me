@@ -8,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	@if(empty($title))
-		<title>BadFox &mdash;</title>
+		<title>Flexolk &mdash;</title>
 	@else
     	<title>{{$title}}</title>
 	@endif
@@ -83,7 +83,7 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="js-fullheight " border: none>
 			<a href="{{ url('index') }}" class="blog-img"><img src="{{URL::asset('images/badfox.png')}}" class="logo-img img-responsive" alt="IMAGE"></a>
-			<h1 id="fh5co-logo"><a href="{{ url('index') }}">BadFox</a></h1>
+			<h1 id="fh5co-logo"><a href="{{ url('index') }}">Flexolk</a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					@switch($category)

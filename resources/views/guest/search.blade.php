@@ -1,4 +1,4 @@
-@extends('layouts.badFoxStyle', ['category' => '2','title' => '搜尋 - BadFox'])
+@extends('layouts.badFoxStyle', ['category' => '2','title' => '搜尋 - Flexolk'])
 
 @section('content')
 <div class="fh5co-narrow-content animated fadeInLeft" data-animate-effect="fadeInLeft">
