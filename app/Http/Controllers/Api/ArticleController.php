@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class ArticleController extends Controller
 {
     public function getFirst4Article(){
-        //$articles = Article::all()->take(4);
-        return "87";
+        $articles = Article::all()->take(4);
+        return dd($articles);
     }
 }
