@@ -11,6 +11,6 @@ class ArticleController extends Controller
 {
     public function getFirst4Article(){
         $articles = Article::all()->take(4);
-        return $articles->toJson();
+        return "87";
     }
 }
