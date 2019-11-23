@@ -20,6 +20,6 @@ class ArticleController extends Controller
             "data" => $articles
 
         ];
-        return response()->json(req);
+        return response()->json($req);
     }
 }
