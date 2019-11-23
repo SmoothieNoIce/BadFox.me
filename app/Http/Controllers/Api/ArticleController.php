@@ -12,6 +12,9 @@ class ArticleController extends Controller
 {
     public function getFirst4Article(){
         $articles = Article::all()->take(4);
+        for($i = 0 ; $i < count($articles) ; $i++){
+            $articles[$i]["tags"] = $articles[$i]->tags;
+        }
         $result = [
             "status"=>"200"
         ];
