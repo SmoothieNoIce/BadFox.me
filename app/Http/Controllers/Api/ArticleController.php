@@ -10,7 +10,8 @@ use Response;
 
 class ArticleController extends Controller
 {
-    public function getFirst4Article($request){
-        return "H";
+    public function getFirst4Article(){
+        $articles = Article::all()->take(4);
+        return response()->json($articles);
     }
 }
