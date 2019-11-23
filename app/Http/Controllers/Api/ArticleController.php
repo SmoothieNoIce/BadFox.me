@@ -10,7 +10,7 @@ use Response;
 
 class ArticleController extends Controller
 {
-    public function getFirst4Article(){
+    public function getFirst4Article($request){
         return "H";
     }
 }
