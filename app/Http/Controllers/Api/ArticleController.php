@@ -12,6 +12,14 @@ class ArticleController extends Controller
 {
     public function getFirst4Article(){
         $articles = Article::all()->take(4);
-        return response()->json($articles);
+        $status = [
+            "status"=>"200"
+        ];
+        $req = [
+            "status" => $status,
+            "data" => $articles
+
+        ];
+        return response()->json(req);
     }
 }

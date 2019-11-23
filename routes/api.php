@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['prefix' => 'v1','middleware' => ['auth:api']], function () {
+Route::group(['prefix' => 'v1'], function () {
     Route::get('/article/fourArticle', 'Api\ArticleController@getFirst4Article');
+    Route::get('/article/Article', 'Api\ArticleController@getFirst4Article');
 });
