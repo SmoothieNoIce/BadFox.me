@@ -45,7 +45,6 @@
 		<p style="margin: 0 0 5px 0;" >{{'ID：'.$article->id}}</p>
 		<p style="margin: 0 0 5px 0;">{{'TITLE：'.$article->title}}</p>
 		<p style="margin: 0 0 5px 0;">{{'DATE：'.$article->date}}</p>
-		<p style="margin: 0 0 5px 0;">{{'AUTHOR：'.$article->author}}</p>
 		<p style="margin: 0 0 5px 0;">{{'THUMBNAIL：'.$article->thumbnail}}</p>
 		<p style="margin: 0 0 5px 0;">{{'TAGS：'}}
 			@foreach ($article->tags as $tag)

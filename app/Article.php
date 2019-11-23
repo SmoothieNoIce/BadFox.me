@@ -13,7 +13,6 @@ class Article extends Model
     protected $fillable = [
         'id',
         'date',
-        'author',
         'thumbnail',
         'title',
         'content',

@@ -23,16 +23,6 @@
       />
     </div>
     <div class="form-group">
-      <label class="fh5co-heading-2">作者</label>
-      <input
-        class="form-control article-form"
-        type="text"
-        placeholder="AUTHOR"
-        name="author"
-        v-model="author"
-      />
-    </div>
-    <div class="form-group">
       <label class="fh5co-heading-2">略縮圖</label>
       <input
         class="form-control article-form"
@@ -76,7 +66,6 @@
       <input type="hidden" name="_token" :value="csrf" />
       <input type="hidden" name="title" v-bind:value="name" />
       <input type="hidden" name="date" v-bind:value="date" />
-      <input type="hidden" name="author" v-bind:value="author" />
       <input type="hidden" name="thumbnail" v-bind:value="thumbnail" />
       <input type="hidden" name="content" v-bind:value="content" />
       <input id="preview-tags" type="hidden" name="tags" v-bind:value="tags" />
@@ -112,7 +101,6 @@ export default {
     "id",
     "title",
     "date",
-    "author",
     "thumbnail",
     "content",
     "tags",
@@ -197,7 +185,6 @@ export default {
       let data = new FormData();
       data.append("title", this.title);
       data.append("date", this.date);
-      data.append("author", this.author);
       data.append("thumbnail", this.thumbnail);
       data.append("content", this.content);
       data.append("tags", json);

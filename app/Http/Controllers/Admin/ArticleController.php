@@ -60,7 +60,6 @@ class ArticleController extends Controller
         $article = new Article();
         $article->title = $request['title'];
         $article->date = $request['date'];
-        $article->author = $request['author'];
         $article->thumbnail = $request['thumbnail'];
         $article->content = $request['content'];
         $tags = json_decode($request['tags'], true);
@@ -74,7 +73,6 @@ class ArticleController extends Controller
         $article = new Article();
         $article->title = $request['title'];
         $article->date = $request['date'];
-        $article->author = $request['author'];
         $article->thumbnail = $request['thumbnail'];
         $article->content = $request['content'];
         $article->save();
@@ -102,7 +100,6 @@ class ArticleController extends Controller
         $article->update([
             'title' => $request['title'],
             'date' => $request['date'],
-            'author' => $request['author'],
             'thumbnail' => $request['thumbnail'],
             'content' => $request['content'],
         ]);

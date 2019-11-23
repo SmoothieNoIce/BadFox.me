@@ -26,7 +26,6 @@
 			@endisset
 	
 			<br><br>
-			<h2 class="fh5co-heading">作者： {{$article->author}}</h2>
 	
 			<h2 class="article-text">{!!$article->content!!}</h2>
 	

@@ -37,7 +37,7 @@
 					<a href="{{url('article/'.$article->id)}}" class="blog-img"><img src="{{$article->thumbnail}}" class="img-responsive" alt="IMAGE"></a>
 					<div class="desc">
 						<h3><a href="{{url('article/'.$article->id)}}">{{$article->title}}</a></h3>
-						<span><small>{{$article->author}} </small> / <small>{{$article->date}}  </small> </small></span>
+						<span><small>{{$article->date}} </small></span>
 						<p style="color: black">{{mb_substr($article->content,0,50,"utf-8")}}</p>
 						<a href="{{url('article/'.$article->id)}}" class="lead">Read More <i class="icon-arrow-right3"></i></a>
 					</div>
