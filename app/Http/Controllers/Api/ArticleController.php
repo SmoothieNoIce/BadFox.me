@@ -12,11 +12,11 @@ class ArticleController extends Controller
 {
     public function getFirst4Article(){
         $articles = Article::all()->take(4);
-        $status = [
+        $result = [
             "status"=>"200"
         ];
         $req = [
-            "status" => $status,
+            "result" => $result,
             "data" => $articles
 
         ];
